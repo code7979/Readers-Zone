@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Prototype</string>
+    <string name="notification_channel_id">pdf_downloader</string>
+    <string name="empty_list">There is no offline book available</string>
+</resources>

@@ -1,0 +1,42 @@
+CREATE TABLE localBookDetail (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    book_id TEXT NOT NULL,
+    title TEXT NOT NULL,
+    subtitle TEXT NOT NULL,
+    authors TEXT NOT NULL,
+    image TEXT NOT NULL,
+    url TEXT NOT NULL,
+    description  TEXT NOT NULL,
+    publisher TEXT NOT NULL,
+    pages  TEXT NOT NULL,
+    year  TEXT NOT NULL,
+    download TEXT NOT NULL,
+    fileUri TEXT NOT NULL
+);
+
+getAllOfflineBook:
+SELECT *
+FROM localBookDetail;
+
+getBookById:
+SELECT *
+FROM localBookDetail
+WHERE id = :id;
+
+getBookByBookId:
+SELECT *
+FROM localBookDetail
+WHERE book_id = :bookId;
+
+deleteBookById:
+DELETE FROM localBookDetail
+WHERE id = :id;
+
+deleteBookByBookId:
+DELETE FROM localBookDetail
+WHERE book_id = :bookId;
+
+insertBook:
+INSERT OR REPLACE
+INTO localBookDetail
+VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);
